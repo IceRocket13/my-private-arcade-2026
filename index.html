@@ -2,26 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Cloudflare Arcade</title>
     <style>
-        body { background: #111; color: white; font-family: sans-serif; text-align: center; padding: 50px; }
-        .grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
-        .btn { 
-            padding: 30px; background: #e6cc00; color: white; text-decoration: none; 
-            border-radius: 15px; font-weight: bold; width: 220px; transition: 0.3s;
-            border: 2px solid transparent; display: block;
+        /* FIX: Enable Scrolling and Layout */
+        body { 
+            background: #111; 
+            color: white; 
+            font-family: 'Segoe UI', sans-serif; 
+            text-align: center; 
+            margin: 0; 
+            padding: 50px 20px; 
+            min-height: 100vh; 
+            overflow-y: auto; /* Allow scrolling down */
         }
-        .btn:hover { transform: scale(1.05); background: #ff9d4d; border-color: white; }
-        h1 { font-size: 3.5rem; margin-bottom: 40px; color: #f6821f; text-shadow: 2px 2px #000; }
+
+        h1 { font-size: 3.5rem; color: #f6821f; margin-bottom: 40px; }
+
+        /* FIX: Grid that wraps buttons to new lines */
+        .grid { 
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
+            flex-wrap: wrap; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+
+        /* FIX: Button Styling & Colors */
+        .btn { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px; 
+            background: #f6821f; /* Your orange color */
+            color: white; 
+            text-decoration: none; 
+            border-radius: 15px; 
+            font-weight: bold; 
+            width: 250px; 
+            min-height: 80px;
+            transition: 0.3s;
+            border: 2px solid transparent;
+            font-size: 1.2rem;
+        }
+
+        /* FIX: Hover effect */
+        .btn:hover { 
+            transform: scale(1.05); 
+            background: #00ff00; /* Change to your hover color */
+            box-shadow: 0 0 20px #00ff00;
+            border-color: white; 
+        }
     </style>
 </head>
 <body>
-    <h1>learnalot</h1>
+
+    <h1>🕹️ PROJECT ARCADE</h1>
+    
     <div class="grid">
-        <!-- These point to your game folders -->
+        <!-- BUTTON 1: Minecraft (Folder) -->
         <a class="btn" href="eagler/">MINECRAFT 1.8.8</a>
+
+        <!-- BUTTON 2: Slow Roads (Folder) -->
         <a class="btn" href="slowroads/">SLOW ROADS</a>
-        <a class="btn" href="smashkarts.html">
+
+        <!-- BUTTON 3: Smash Karts (File) -->
+        <a class="btn" href="smashkarts.html">SMASH KARTS</a>
+
+        <!-- Add more buttons here later - follow this exact format! -->
     </div>
+
+    <!-- Space at the bottom for scrolling -->
+    <div style="height: 100px;"></div>
+
 </body>
 </html>
